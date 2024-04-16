@@ -8,12 +8,27 @@
   </head>
   <body>
     <h1>你好啊 李银河</h1>
-    <script>
+    <!-- url param -->
+    <!-- <script>
       async function urlParam() {
         const res = await axios.get('/person/1');
         console.log(res);
       }
       urlParam();
+    </script> -->
+
+    <!-- query -->
+    <script>
+      async function query() {
+        const res = await axios.get('/person/find', {
+          params: {
+            name: '光',
+            age: 20,
+          },
+        });
+        console.log(res);
+      }
+      query();
     </script>
   </body>
 </html>

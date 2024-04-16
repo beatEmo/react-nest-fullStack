@@ -6,6 +6,7 @@ import {
   Patch,
   Param,
   Delete,
+  Query,
 } from '@nestjs/common';
 import { PersonService } from './person.service';
 import { CreatePersonDto } from './dto/create-person.dto';
@@ -15,9 +16,15 @@ import { UpdatePersonDto } from './dto/update-person.dto';
 export class PersonController {
   constructor(private readonly personService: PersonService) {}
 
+  // query
+  @Get('find')
+  query(@Query('name') name: string, @Query('age') age: number) {
+    return `received: name=${name} age=${age}`;
+  }
+
   // url params
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  urlParam(@Param('id') id: string) {
     // return this.personService.findOne(+id);
     return `received: id${id}`;
   }
