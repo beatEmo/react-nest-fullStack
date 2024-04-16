@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://unpkg.com/axios@0.24.0/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/qs@6.10.2/dist/qs.js"></script>
   </head>
   <body>
     <h1>你好啊 李银河</h1>
@@ -18,7 +19,7 @@
     </script> -->
 
     <!-- query -->
-    <script>
+    <!-- <script>
       async function query() {
         const res = await axios.get('/person/find', {
           params: {
@@ -29,6 +30,25 @@
         console.log(res);
       }
       query();
+    </script> -->
+
+    <!-- form-urlencoded -->
+    <script>
+      async function formUrlEncoded() {
+        const res = await axios.post(
+          '/person',
+          Qs.stringify({
+            name: '光',
+            age: 20,
+          }),
+          {
+            headers: { 'content-type': 'application/x-www-form-urlencoded' },
+          },
+        );
+        console.log(res);
+      }
+
+      formUrlEncoded();
     </script>
   </body>
 </html>

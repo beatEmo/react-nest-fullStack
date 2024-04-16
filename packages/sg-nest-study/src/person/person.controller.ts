@@ -29,9 +29,11 @@ export class PersonController {
     return `received: id${id}`;
   }
 
+  // form urlencoded
   @Post()
   create(@Body() createPersonDto: CreatePersonDto) {
-    return this.personService.create(createPersonDto);
+    // return this.personService.create(createPersonDto);
+    return `received: ${JSON.stringify(createPersonDto)}}`;
   }
 
   @Get()
