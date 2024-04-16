@@ -19,6 +19,12 @@ import { AnyFilesInterceptor } from '@nestjs/platform-express';
 export class PersonController {
   constructor(private readonly personService: PersonService) {}
 
+  // josn
+  @Post()
+  json(@Body() createPersonDto: CreatePersonDto) {
+    return `response: ${JSON.stringify(createPersonDto)}`;
+  }
+
   // form data
   @Post('file')
   @UseInterceptors(

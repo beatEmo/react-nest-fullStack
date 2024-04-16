@@ -52,7 +52,7 @@
     </script> -->
 
     <!-- form data -->
-    <input id="fileInput" type="file" multiple />
+    <!-- <input id="fileInput" type="file" multiple />
     <script>
       const fileInput = document.querySelector('#fileInput');
 
@@ -70,6 +70,18 @@
       }
 
       fileInput.onchange = formData;
+    </script> -->
+
+    <!-- json -->
+    <script>
+      async function json() {
+        const res = await axios.post('/person', {
+          name: '光',
+          age: 20,
+        });
+        console.log(res);
+      }
+      json();
     </script>
   </body>
 </html>
