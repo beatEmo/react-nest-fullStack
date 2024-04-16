@@ -4,6 +4,7 @@ specifiers:
   '@nestjs/cli': ^10.0.0
   '@nestjs/common': ^10.0.0
   '@nestjs/core': ^10.0.0
+  '@nestjs/mapped-types': '*'
   '@nestjs/platform-express': ^10.0.0
   '@nestjs/schematics': ^10.0.0
   '@nestjs/testing': ^10.0.0
@@ -31,6 +32,7 @@ specifiers:
 dependencies:
   '@nestjs/common': registry.npmmirror.com/@nestjs/common/10.3.7_rcbhqa4so6dtcde4mhxkgzk6je
   '@nestjs/core': registry.npmmirror.com/@nestjs/core/10.3.7_yus5svu3suflkec63io4ph3omu
+  '@nestjs/mapped-types': registry.npmmirror.com/@nestjs/mapped-types/2.0.5_gfpjmnjd2irnag3gwkxgypkyuu
   '@nestjs/platform-express': registry.npmmirror.com/@nestjs/platform-express/10.3.7_w6acweilb2ifjcytrys3vizh5m
   reflect-metadata: registry.npmmirror.com/reflect-metadata/0.1.14
   rxjs: registry.npmmirror.com/rxjs/7.8.1
@@ -1123,6 +1125,26 @@ packages:
       uid: registry.npmmirror.com/uid/2.0.2
     transitivePeerDependencies:
       - encoding
+
+  registry.npmmirror.com/@nestjs/mapped-types/2.0.5_gfpjmnjd2irnag3gwkxgypkyuu:
+    resolution: {integrity: sha512-bSJv4pd6EY99NX9CjBIyn4TVDoSit82DUZlL4I3bqNfy5Gt+gXTa86i3I/i0iIV9P4hntcGM5GyO+FhZAhxtyg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@nestjs/mapped-types/-/mapped-types-2.0.5.tgz}
+    id: registry.npmmirror.com/@nestjs/mapped-types/2.0.5
+    name: '@nestjs/mapped-types'
+    version: 2.0.5
+    peerDependencies:
+      '@nestjs/common': ^8.0.0 || ^9.0.0 || ^10.0.0
+      class-transformer: ^0.4.0 || ^0.5.0
+      class-validator: ^0.13.0 || ^0.14.0
+      reflect-metadata: ^0.1.12 || ^0.2.0
+    peerDependenciesMeta:
+      class-transformer:
+        optional: true
+      class-validator:
+        optional: true
+    dependencies:
+      '@nestjs/common': registry.npmmirror.com/@nestjs/common/10.3.7_rcbhqa4so6dtcde4mhxkgzk6je
+      reflect-metadata: registry.npmmirror.com/reflect-metadata/0.1.14
+    dev: false
 
   registry.npmmirror.com/@nestjs/platform-express/10.3.7_w6acweilb2ifjcytrys3vizh5m:
     resolution: {integrity: sha512-noNJ+PyIxQJLCKfuXz0tcQtlVAynfLIuKy62g70lEZ86UrIqSrZFqvWs/rFUgkbT6J8H7Rmv11hASOnX+7M2rA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@nestjs/platform-express/-/platform-express-10.3.7.tgz}
